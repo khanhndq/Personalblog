@@ -1,0 +1,28 @@
+<form action="/addOrEdit" method="POST" autocomplete="off" enctype="multipart/form-data">
+    <h1>
+        {{titleBlog}}
+    </h1>
+    <input type="hidden" name="_id" value="{{blog._id}}">
+    <div class="form-group">
+        <label>Title</label>
+        <input type="text" class="form-control" name="title" placeholder="Title" value="{{blog.title}}">
+        <div class="text-danger"></div>
+    </div>
+    <div class="form-group">
+        <label>Author</label>
+        <input type="text" class="form-control" name="author" placeholder="Author" value="{{blog.author}}">
+        <div class="text-danger">
+            {{employee.emailError}}</div>
+    </div>
+     <div class="form-group">
+        <label for="">Content</label>
+        <textarea class="form-control" name="content" placeholder="Content" rows="7">{{blog.content}}</textarea>
+    </div>
+    <div class="form-group">
+        <label for="img">Select image:</label>
+        <input type="file" id="img" name="img" accept="image/*" value="abc">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+    </div>
+</form>
